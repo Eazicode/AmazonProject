@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booleans</title>
+</head>
+<body>
+  <p>
+    This is Me
+  </p>
+
+  <script>
+    //Only 2 boolean value (True and False)
+
+    console.log(-30 < 5)
+
+    let page = true;
+    console.log(!page);
+
+    console.log(typeof !true);
+    console.log( 10/5 === '2');
+
+    //IF STATEMENT
+
+    if ('okay') {
+      console.log('TRUTHY');
+    } else {
+      console.log('FALSY');
+    }
+
+    let cartQuantity = 'k';
+    // cartQuantity = '';
+
+    if (!cartQuantity) {
+      console.log('truthy')
+    } else {
+      console.log('falsy')
+    }
+
+    // SHORTCUT FOR IF STATEMENT
+    // 1. TERNARY OPERATOR
+
+    let result = true ? 0 : 'F' 
+    console.log(result)
+
+    let final = !result;
+    console.log(final)
+
+    //2. GUARD OPERATOR
+
+    console.log(true && '')
+    console.log('5' && 500)
+    console.log(false && 50)
+
+    //3. OR OPEARATOR 
+    console.log(false || 1250)
+    console.log(0 || 500)
+
+
+  </script>
+</body>
+</html>

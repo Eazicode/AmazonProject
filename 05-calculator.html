@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <div>
+    <button onclick="console.log(`${calculate += 1}`)">1</button>
+    <button onclick="console.log(`${calculate += 2}`)">2</button>
+    <button onclick="console.log(`${calculate += 3}`)">3</button>
+    <button onclick="console.log(`${calculate += '+'}`)">+</button>
+    <button onclick="console.log(`${calculate = eval(calculate)}`)">=</button>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <button onclick="console.log(`${calculate += 4}`)">4</button>
+    <button onclick="console.log(`${calculate += 5}`)">5</button>
+    <button onclick="console.log(`${calculate += 6}`)">6</button>
+    <button onclick="console.log(`${calculate += '-'}`)">-</button>
+    <button onclick="console.log(`${calculate += '*' }`)">*</button>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <button onclick="console.log(`${calculate += 7}`)">7</button>
+    <button onclick="console.log(`${calculate += 8}`)">8</button>
+    <button onclick="console.log(`${calculate += 9}`)">9</button>
+    <button onclick="console.log(`${calculate += '.'}`)">.</button>
+    <button onclick="console.log(`${calculate += '/' }`)">/</button>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <button onclick="console.log(`${calculate += 0}`)">0</button>
+    <button onclick="alert('calculator was cleared');console.log(`${calculate = ''}`)">delete</button>
+  </div>
+
+  <script>
+    let calculate = '';
+  </script>
+</body>
+</html>

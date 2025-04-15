@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <div>
+    <button onclick="updateCalcuation(1)">1</button>
+    <button onclick="updateCalcuation(2)">2</button>
+    <button onclick="updateCalcuation(3)">3</button>
+    <button onclick="updateCalcuation('+')">+</button>
+    <button onclick="console.log(calculate = eval(calculate))">=</button>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <button onclick="updateCalcuation(4)">4</button>
+    <button onclick="updateCalcuation(5)">5</button>
+    <button onclick="updateCalcuation(6)">6</button>
+    <button onclick="updateCalcuation('-')">-</button>
+    <button onclick="updateCalcuation('*')">*</button>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <button onclick="updateCalcuation(7)">7</button>
+    <button onclick="updateCalcuation(8)">8</button>
+    <button onclick="updateCalcuation(9)">9</button>
+    <button onclick="updateCalcuation('.')">.</button>
+    <button onclick="updateCalcuation('/')">/</button>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <button onclick="updateCalcuation(0)">0</button>
+    <button onclick="
+      alert('calculator was cleared');
+      console.log(`${calculate = ''}`)">
+      delete
+    </button>
+  </div>
+
+  <script>
+
+    let calculate = '';
+    function updateCalcuation(number) {
+      calculate += number
+      console.log(calculate);
+    }
+
+    const getCounter = () => {
+      let count = 0;
+      return () => ++count
+      
+    }
+
+    const counter1 = getCounter();
+    const counter2 = getCounter();
+
+    console.log(counter1());
+    console.log(counter1());
+    console.log(counter1());
+    console.log(counter2());
+    console.log(counter2());
+
+
+  </script>
+</body>
+</html>

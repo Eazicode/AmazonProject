@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>object</title>
+</head>
+<body>
+  <p>This is for objects</p>
+  <script>
+    //Left is called property while the right is called value
+    //fnx inside object are called method e.g console.log(), Math.random()
+    const product = {
+      name: 'Socks',
+      price: 1090,
+      rating: {
+        stars: 4.5,
+        count: 95
+      }
+    };
+
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+    console.log(product.rating.stars);
+    console.log(product.rating.count);
+
+    product.name  = 'watch';
+    console.log(product)
+
+    //To add property
+    product['delivery-Time'] = '3 weeks'
+    console.log(product) 
+
+    //To delete a property
+    delete product.name;
+    console.log(product)
+
+
+  </script>
+</body>
+</html>

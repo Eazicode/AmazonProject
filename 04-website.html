@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Simple Dev</title>
+
+    <style>
+      h1 {
+        color: orange;
+        font-weight: bold;
+      }
+      p {
+        font-style: italic;
+      }
+      button {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is Emmanuel</h1>
+    <h2>
+      This is Emmanuel
+    </h2>
+    <p>
+      This is Emmanuel
+    </p>
+    <button 
+      onclick="console.log('Added')" title="okay">
+      Alright
+   </button>
+
+    <button 
+      onclick="console.log('Loading...')
+      alert('Purchased')">
+      This is Eze
+    </button>
+
+    <button id="popup">
+      click me
+    </button>
+
+    <script>
+      // console.log(26 + 2)
+      // console.log('some' * 'text')
+      // console.log('Welcome')
+
+      const Btn = document.getElementById('popup')
+
+      Btn.addEventListener('click', () => {
+        console.log('Thank you very much')
+        alert('Finally.... You popped up')
+      })
+    </script>
+
+  </body>
+</html> 
