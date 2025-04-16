@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>objectexercises</title>
+</head>
+<body>
+  <p>Attempt the exercises</p>
+
+  <script>
+    const product = {
+      name: 'basketball',
+      price: 2095
+    }
+
+    console.log(product);
+
+    product.price += 500
+    console.log(product);
+
+    product['delievry-time'] = '3 days'
+    console.log(product)
+
+////////////////////////////////////////////
+
+
+    const product1 = {
+      car: 'rari',
+      price: 1
+    }
+
+    const product2 = {
+      name: 'buggy',
+      price: -3
+    }
+
+    function comparePrice( a, b) {
+      if (a.price < b.price ) {
+        return a
+      } else if (b.price < a.price) {
+        return b
+      }
+    }
+
+    console.log(comparePrice(product1, product2))
+
+/////////////////////////////////////////////////////
+
+    const boluProps = {
+      name: 'mayor',
+      price: 25
+     
+    }
+
+    const ezeProps = {
+      name: 'mayor',
+      // name: 'eze',
+      price: 25 
+    }
+
+    function isSameProps(prop1, prop2) {
+      if (
+          (prop1.name === prop2.name) && 
+          (prop1.price === prop2.price)
+        ) {
+        return true
+      } else {
+        return false
+      }
+    }
+
+    console.log(isSameProps(boluProps, ezeProps))
+
+    ////////////////////////////////////
+
+    console.log('POTUS'.repeat(20))
+
+    //////////////////////////////////
+
+    
+  </script>
+</body>
+</html>

@@ -8,6 +8,7 @@
 <body>
   <p>This is for objects</p>
   <script>
+    
     //Left is called property while the right is called value
     //fnx inside object are called method e.g console.log(), Math.random()
     const product = {
@@ -16,6 +17,10 @@
       rating: {
         stars: 4.5,
         count: 95
+      },
+      fun : function () {
+        // return 'Thanks'
+        console.log('Thanks')
       }
     };
 
@@ -24,11 +29,14 @@
     console.log(product.price);
     console.log(product.rating.stars);
     console.log(product.rating.count);
+    product.fun()
 
     product.name  = 'watch';
     console.log(product)
 
-    //To add property
+    //const does not stop you from change data in the object but stops you from change the object itself 
+
+    //To add property, we use DOT NOTATION. or BRACKET NOTATION['']
     product['delivery-Time'] = '3 weeks'
     console.log(product) 
 
@@ -37,6 +45,54 @@
     console.log(product)
 
 
+    // TWO IMPORTANT BUILT IN OBJECTS 
+    // 1. Json() = javascript object notation N.B: does not suppport single quotes and functions. Helps save data and object in storage
+
+    const product1 = {
+      "name": "cars",
+      "price": 1000000,
+      "rating": {
+        "stars": 4.5,
+        "count": 95,
+        "status": true
+      },
+      fun : function () {
+        return 'Thanks'
+        // console.log('Thanks')
+      }
+    };
+
+    console.log(product1)
+    //convert a  JS object to a JSON object and convert back from a JSON object back to JS object
+    console.log(JSON.stringify(product1));
+    console.log(JSON.parse(JSON.stringify(product1)))
+
+    // 2. localStorage(). N.B doesn't get deleted when the webpage is refreshed. localStorage.setItem(), localStorage.getItem(), localStorage.removeItem() e.t.c
+
+    //AUTO BOXING  i.e Javascript creates an invisible objects for strings and numbers and give methods and properties to numbers and strings
+    console.log('hello'.length);
+    console.log('mayor'.toUpperCase());
+    console.log(53.68.toFixed(1)) 
+
+
+    //DESTRUCTING 
+
+    const property = {
+      message: 'This is Eze',
+      age: 56
+    }
+
+    const { message, age } = property
+    console.log(message)
+    console.log(age)
+
+    const objmethod = {
+      method: function methodFunction() {
+        console.log('methods')
+      }
+    }
+
+    objmethod.method()
   </script>
 </body>
 </html>
