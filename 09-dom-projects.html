@@ -8,13 +8,28 @@
 <body>
   <p>YouTube Subscribe Button</p>
 
-  <button class="js-subscribe-btn" onclick="changeSubscribeBtn()">
+  <button style="margin-bottom: 30px;"  class="js-subscribe-btn" onclick="changeSubscribeBtn()">
     Subscribe 
   </button>
 
+  <p>Amazon Shipping Calculator</p>
+  <p>Order under $40 = +$10 shipping</p>
+  <p>Order over $40 = FREE shipping</p>
+
+  <input class="js-input" 
+    type="number" 
+    placeholder="Cost of order" 
+    onkeydown="
+    amazonShippngEnterBtn(event)
+  "> 
+
+  <button onclick="amazonShippng()"  class="js-calculate">Calculate</button>
+
+  <p class="js-inputdisplay"></p>
 
   <p>Rock Paper Scissors</p>
   <a href="./09-Dom-rockpaperscissor.html">Click here</a>
+
   <script>
 
     function changeSubscribeBtn () {
@@ -28,6 +43,29 @@
       
       // subscirbeBtn.innerText === 'Subscribe'? subscirbeBtn.innerText = 'Subscribed' : subscirbeBtn.innerText = 'Subscribe'
     }
+
+    const input = document.querySelector('.js-input')
+    let inputDisplay = document.querySelector('.js-inputdisplay')
+
+    function amazonShippng() {
+      // if (input.value <= 39.99) {
+      //  inputDisplay.innerHTML = `$${(+input.value + 10).toFixed(2)}`
+      //  return (inputDisplay)
+      // } else {
+      //  inputDisplay.innerHTML = 'FREE SHIPPING'
+      //  return (inputDisplay)
+      // }
+      
+      input.value <= 150 ? inputDisplay.innerHTML = `$${(+input.value + 10).toFixed(2)}` : inputDisplay.innerHTML = 'FREE SHIPPING'
+
+    }
+
+    function amazonShippngEnterBtn(event) {
+      if (event.keyCode === 13 ) {
+        amazonShippng()
+      }
+    }
+
   </script>
 </body>
 </html>

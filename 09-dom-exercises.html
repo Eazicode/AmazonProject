@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom exercises</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="js-changeBtn" onclick="changeBtnInnerText()">9b</button>
+
+  <div style="margin-top: 30px;">
+    <button class="js-headBtn" onclick="displayBtnText('heads')">heads</button>
+    <button class="js-tailBtn" onclick="displayBtnText('tails')">tails</button>
+  </div>
+
+  <p class="js-displayBtnText"></p>
+
+  <p>
+    <input class="js-input-for-submitted-text" type="text" placeholder="Type your name" onkeydown="displayOnKeypressDown(event)">
+    <button onclick="displaySubmittedTextFunction()">Submit</button>
+    <p class="js-display-submit-text"></p>
+  </p>
+
+  <h2>Display on key up</h2>
+
+  <input class="js-inputforkeyup" type="text" placeholder="Type something" onkeyup="dispalyOnKeyupFunction()">
+  <p class="js-onkeyup"></p>
+
+  
+  <script>
+    const buttonElem = document.querySelector('button');
+    console.log(buttonElem)
+    console.log(buttonElem.innerHTML)
+
+    const changeBtn = document.querySelector('.js-changeBtn')
+
+    function changeBtnInnerText() {
+      
+      changeBtn.innerHTML === '9b' ? changeBtn.innerHTML = '9b done!!!' : changeBtn.innerHTML = '9b' 
+    }
+
+    const displayElem = document.querySelector('.js-displayBtnText');
+    const headBtnElem = document.querySelector('.js-headBtn');
+    const tailBtnElem = document.querySelector('.js-tailBtn');
+
+    function displayBtnText(move) {
+     if (headBtnElem.innerHTML === move) {
+      displayElem.innerHTML =`You chose: ${move}`
+     }
+
+     if (tailBtnElem.innerHTML === move) {
+      displayElem.innerHTML = `You chose: ${move}`
+     }
+    }
+
+    const inputForSubmittedText = document.querySelector('.js-input-for-submitted-text');
+    const displaySubmittedText = document.querySelector('.js-display-submit-text');
+
+    function displaySubmittedTextFunction() {
+      displaySubmittedText.innerHTML = `Your name is: ${inputForSubmittedText.value}`
+    }
+
+    function displayOnKeypressDown(event) {
+      if (event.keyCode === 13) {
+        displaySubmittedTextFunction()
+      }
+    }
+
+    let displayOnkeyup = document.querySelector('.js-onkeyup');
+    const inputForOnKeyup = document.querySelector('.js-inputforkeyup');
+
+    function dispalyOnKeyupFunction() {
+      displayOnkeyup.innerHTML = inputForOnKeyup.value
+    }
+
+  </script>
+</body>
+</html> 

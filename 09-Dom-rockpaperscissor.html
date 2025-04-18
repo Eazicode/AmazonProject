@@ -69,9 +69,6 @@
 
     updateScore();
 
-    document.querySelector('.js-result').innerHTML
-
-
     function playGame (playerMove) {
       
       const computerMove = pickComputerMove();
@@ -120,7 +117,7 @@
       document.querySelector('.js-result').innerHTML = `${result}`
       updateResult(playerMove, computerMove);
       
-      alert(`you picked ${playerMove}, computer picked ${computerMove}. ${result}`)
+      // alert(`you picked ${playerMove}, computer picked ${computerMove}. ${result}`)
       
     }
     function updateScore() {
