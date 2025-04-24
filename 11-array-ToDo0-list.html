@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array To-do List</title>
+</head>
+<body>
+  <p>Todo List Practice 1</p>
+
+  <div>
+    <input class="to-do-list1" type="text" placeholder="Todo name">
+    <button onclick="addTodo1Array()">Add</button>
+  </div>
+
+  <p>Todo List Practice 2</p>
+
+  <div>
+    <input class="to-do-list2" type="text" placeholder="Todo name">
+    <button onclick="addTodo2Array()">Add</button>
+    <p class="display-todo"></p>
+  </div>
+
+  <!-- THIS IS WHERE LOOPS AND ARRAYS ARE USED -->
+
+
+  <p>Todo List Practice 3</p>
+
+  <div class="para-container">
+    <input class="to-do-list3"  type="text" placeholder="Todo name but with loops">
+    <button onclick="addTodo3Array()">Add</button>
+    <!-- <p ></p> -->
+  </div>
+
+  <p>Todo List</p>
+
+  <div>
+    <input type="text">
+    <input type="date">
+    <button>Add</button>
+  </div>
+
+
+  <script>
+    let array1 = [];
+
+    function addTodo1Array() { 
+      let todo1Input = document.querySelector('.to-do-list1');
+
+      array1.push(todo1Input.value)
+      todo1Input.value = ''
+      console.log(array1)
+    }
+
+    let array2 = [];
+    let displayTodo = document.querySelector('.display-todo');
+
+    function addTodo2Array() {
+      let todo2Input = document.querySelector('.to-do-list2');
+
+      array2.push(`${ todo2Input.value}`);
+      displayTodo.innerHTML = array2;
+      todo2Input.value = ''
+    }
+
+    let array3 = [];
+
+    function addTodo3Array() {
+      let todo3Input = document.querySelector('.to-do-list3');
+      let paraContainer = document.querySelector('.para-container');
+      
+      array3.push(todo3Input.value)
+      // console.log(array3)
+
+      // for (let i = 0; i < array3.length; i++) {
+      //   let paragraph = document.createElement('p');
+      //   paragraph.innerHTML = array3[i];
+      //   paraContainer.appendChild(paragraph)
+      // }
+
+      let paragraph = document.createElement('p');
+      paragraph.innerHTML = todo3Input.value;
+      paraContainer.appendChild(paragraph)
+      todo3Input.value ='';
+
+      console.log(array3)
+    }
+
+  </script>
+</body>
+</html>

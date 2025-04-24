@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom cart quantity</title>
+</head>
+<body>
+  <button onclick="quantityDisplay.innerHTML = `Cart quantity: ${cartQuantity}`">Show Quantity</button>
+  <button onclick="displayQuantity(1)">Add to Cart</button>
+  <button onclick="displayQuantity(2)">+2</button>
+  <button onclick="displayQuantity(3)">+3</button>
+  <button onclick="displayQuantity(-1)">Remove from Cart</button>
+  <button onclick="displayQuantity(-2)">-2</button>
+  <button onclick="displayQuantity(-3)">-3</button>
+
+  <p class="js-dispaly-quantity"></p>
+
+  <script>
+    let cartQuantity = 0;
+    let quantityDisplay = document.querySelector('.js-dispaly-quantity')
+
+    quantityDisplay.innerHTML = `Cart quantity: ${cartQuantity}`
+
+    function displayQuantity(number) {
+      cartQuantity += number;
+      quantityDisplay.innerHTML = `Cart quantity: ${cartQuantity}`;
+    }
+  </script>
+</body>
+</html>

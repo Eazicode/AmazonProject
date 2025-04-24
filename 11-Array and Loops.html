@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array and loops</title>
+</head>
+<body>
+  <p>This is the Arrays and loop</p>
+  <script>
+    const myArray = [10, 20, 30, 65, 88];
+    console.log(myArray)
+
+    console.log(myArray[0])
+    myArray[2] = 576;
+    console.log(myArray)
+
+    console.log(myArray.length)
+
+    const obj = 'eze'
+
+    console.log(Array.isArray(myArray))
+    console.log(Array.isArray(obj))
+
+    myArray.push(755);
+    console.log(myArray)
+
+    //////////////////
+
+    myArray.splice(3, 2)
+    console.log(myArray)
+
+
+    ///////////////////////// LOOPS
+    //ADDITION
+    const arr = [1, 1, 3];
+    let total = 0;
+
+
+    for (let i = 0; i < arr.length; i++) {
+      total += arr[i]
+    }
+
+    console.log(total);
+
+    ///////// MULTIPY
+
+    const mulArr =[7, 5, 3];
+    let num = 1;
+
+    for (let i = 0; i < mulArr.length; i++) {
+      num *= mulArr[i];
+    }
+
+    console.log(num)
+
+    /////MULTIPY EACH NUMBER IN ARRAY BY 2
+
+    const mulArr2 =[7, 5, 3];
+    let multiplyAns;
+    let totalResult = 0;
+
+    for (let i = 0; i < mulArr2.length; i++) {
+      multiplyAns = mulArr2[i] * 2;
+      totalResult += multiplyAns
+    }
+
+    console.log(totalResult)
+    // console.log(multiplyAns)
+  
+
+  </script>
+</body>
+</html>
